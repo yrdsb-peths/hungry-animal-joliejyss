@@ -15,14 +15,14 @@ public class Bear extends Actor
     public void act() 
     {
         // Add your action code here.
-        if (Greenfoot.isKeyDown("a")){
+        if (Greenfoot.isKeyDown("j")){
             move(-2);
         }
-        if (Greenfoot.isKeyDown("d")){
+        if (Greenfoot.isKeyDown("l")){
             move(2);
         }
-        if (isTouching(Cherry.class)){
-            removeTouching(Cherry.class);
+        if (isTouching(Strawberry.class)){
+            removeTouching(Strawberry.class);
         }
     }
 }

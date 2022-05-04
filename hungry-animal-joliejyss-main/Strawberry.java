@@ -17,6 +17,6 @@ public class Strawberry extends Actor
         // Add your action code here.
         int x = getX();
         int y = getY();
-        setLocation(x, y+2);
+        setLocation(x, y+1);
     }    
 }

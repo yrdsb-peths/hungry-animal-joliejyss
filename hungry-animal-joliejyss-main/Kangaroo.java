@@ -15,14 +15,17 @@ public class Kangaroo extends Actor
     public void act() 
     {
         // Add your action code here.
-        if (Greenfoot.isKeyDown("j")){
-            move(-2);
+        if (Greenfoot.isKeyDown("a")){
+            move(-3);
         }
-        if (Greenfoot.isKeyDown("l")){
-            move(2);
+        if (Greenfoot.isKeyDown("d")){
+            move(3);
         }
-        if (isTouching(Strawberry.class)){
-            removeTouching(Strawberry.class);
+        if (isTouching(Cherry.class)){
+            removeTouching(Cherry.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.spawnCherry();
         }
+        
     }
 }
