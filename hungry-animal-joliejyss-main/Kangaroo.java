@@ -24,8 +24,13 @@ public class Kangaroo extends Actor
         if (isTouching(Cherry.class)){
             removeTouching(Cherry.class);
             MyWorld world = (MyWorld) getWorld();
+            world.increaseScore();
             world.spawnCherry();
         }
+        if (Greenfoot.isKeyDown("space")){
+            turn(2);
+        }
+        
         
     }
 }
