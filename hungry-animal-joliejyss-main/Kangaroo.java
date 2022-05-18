@@ -27,11 +27,11 @@ public class Kangaroo extends Actor
         }
         
         if (isTouching(Cherry.class)){
+            bubblePop.play();
             removeTouching(Cherry.class);
             MyWorld world = (MyWorld) getWorld();
             world.increaseScore();
             world.spawnCherry();
-            bubblePop.play();
         }
         
     }
