@@ -13,6 +13,7 @@ public class Kangaroo extends Actor
     GreenfootImage[] idleLeft = new GreenfootImage[11];
     
     String facing = "right";
+    //SimpleTimer amimationTimer = new SimpleTimer();
     /**
      * Act - do whatever the Kangaroo wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -32,9 +33,17 @@ public class Kangaroo extends Actor
             idleLeft[i].scale(120,100);
         }
     }
+    
+    //animationTimer.mark();
     int imageIndex = 0;
     public void animateKangaroo()
     {
+        /*if (animationTimer.millisElasped() < 500)
+        {
+            return;
+        }
+        animationTimer.mark();
+        */
         if(facing.equals("right"))
         {
             setImage(idleRight[imageIndex]);
